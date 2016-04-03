@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <title>Bootstrap 101 Template</title>
+    
+    <link href="http://fonts.googleapis.com/css?family=Roboto:100,300,400,700" rel="stylesheet">
+    
+    <!-- Bootstrap -->
+    <link href="bootstrap-3.3.6-dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    <style>
+      body {
+        font-family: "Roboto", "Helvetica Neue", Helvetica, Arial, sans-serif;
+        font-size: 14px;
+        line-height: 1.6;
+        color: #000000;
+        background-color: #ffffff;
+        font-weight: 300;
+        margin-bottom: 3em;
+      }
+      h1 {
+        font-size: 56px;
+        text-transform: uppercase;
+        text-align: center;
+      }
+      h1,
+      h2,
+      h3,
+      h4,
+      h5,
+      h6,
+      .eg,
+      .eh,
+      .ei,
+      .ej,
+      .ek,
+      .el {
+        font-family: "Roboto", "Helvetica Neue", Helvetica, Arial, sans-serif;
+        font-weight: 100;
+        line-height: 1.2;
+        color: inherit;
+        letter-spacing: .15em;
+      }
+      
+      /* PATIENT LIST STYLE */
+      tbody > tr {
+        cursor: pointer;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Medication prescription</h1>
+    </div>
+    
+    <div class="container">
+
+      <form class="form-horizontal">
+      
+        <div class="form-group has-feedback">
+          <label class="control-label col-sm-2" for="inputMedication">Medication</label>
+          <div class="col-sm-10">
+            <input type="text" class="form-control" id="inputMedication" aria-describedby="inputSuccess3Status">
+            <span class="glyphicon glyphicon-search form-control-feedback" aria-hidden="true"></span>
+            <span id="inputSuccess3Status" class="sr-only">(success)</span>
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="inputPresentation" class="col-sm-2 control-label">Presentation</label>
+          <div class="col-sm-10">
+            <input type="email" class="form-control" id="inputPresentation" placeholder="500 mg tabs x20">
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="inputRoute" class="col-sm-2 control-label">Route</label>
+          <div class="col-sm-10">
+            <select class="form-control" id="inputRoute" placeholder="Route">
+              <option>OTIC</option>
+              <option>BUCCAL</option>
+              <option>CONJUNC</option>
+              <option>CUTAN</option>
+              <option>DENTAL</option>
+              <option>EPIDUR</option>
+              <option>HEMO</option>
+              <option>INFIL</option>
+              <option>INTERSTIT</option>
+              <option>INTRAMUSCULAR</option>
+              <option>IONTOPHORESIS</option>
+              <option>IRRIGATION</option>
+              <option>LARYNGEAL</option>
+              <option>NASAL</option>
+              <option>OPHTHALMIC</option>
+              <option>OROPHARYNGEAL</option>
+              <option>PARENTERAL</option>
+            </select>
+          </div>
+        </div>
+        <!-- http://www.fda.gov/Drugs/DevelopmentApprovalProcess/FormsSubmissionRequirements/ElectronicSubmissions/DataStandardsManualmonographs/ucm071667.htm -->
+  
+        <div class="form-group">
+          <label for="inputAdministration" class="col-sm-2 control-label">Administration directions</label>
+          <div class="col-sm-10">
+            <textarea class="form-control" rows="3" id="inputAdministration"></textarea>
+          </div>
+        </div>
+        
+        <p class="pull-right">
+          <button type="button" class="btn btn-default" onclick="window.location.href='clinical_record_summary.html'">Cancel</button>
+          &nbsp;
+          <button type="button" class="btn btn-success" onclick="window.location.href='clinical_record_summary.html'">Save</button>
+        </p>
+      </form>
+      
+    </div>
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="bootstrap-3.3.6-dist/js/bootstrap.min.js"></script>
+  </body>
+</html>
