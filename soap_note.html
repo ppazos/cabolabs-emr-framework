@@ -60,48 +60,53 @@
   </head>
   <body>
     <div class="container">
-      <h1>Patients</h1>
+      <h1>SOAP Note</h1>
     </div>
     
     <div class="container">
 
-      <div class="table-responsive">
-        <table class="table table-hover">
-          <thead>
-             <tr>
-              <th class="danger">id</th>
-              <th class="active">firstname</th>
-              <th class="success">lastname</th>
-              <th class="warning">dob</th>
-              <th class="info">...</th>
-             </tr>
-          </thead>
-          <tbody>
-            <tr onclick="window.location.href='clinical_record_summary.html';">
-              <td>12345</td>
-              <td>Carlos</td>
-              <td>Lopez</td>
-              <td>1982-03-05</td>
-              <td>...</td>
-            </tr>
-            <tr>
-              <td>53463</td>
-              <td>Ian</td>
-              <td>McGregor</td>
-              <td>1969-03-05</td>
-              <td>...</td>
-            </tr>
-            <tr>
-              <td>77643</td>
-              <td>Charlotte</td>
-              <td>Jones</td>
-              <td>1989-03-05</td>
-              <td>...</td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
-
+      <form class="form-horizontal">
+      
+        <div class="form-group has-feedback">
+          <label class="control-label col-sm-2" for="inputSubjective">Subjective</label>
+          <div class="col-sm-10">
+            <textarea class="form-control" rows="3" id="inputSubjective" placeholder="lower left back jaw has been sore for the past few days"></textarea>
+          </div>
+        </div>
+        <div class="form-group has-feedback">
+          <label class="control-label col-sm-2" for="inputObjective">Objective</label>
+          <div class="col-sm-10">
+            <textarea class="form-control" rows="3" id="inputObjective" placeholder="1. intraoral swelling, hemorrhage, pain
+2. radiology Pano CT: partial bony, vertically impacted molar, no IAN involved"></textarea>
+          </div>
+        </div>
+        <div class="form-group has-feedback">
+          <label class="control-label col-sm-2" for="inputAssessment">Assessment</label>
+          <div class="col-sm-10">
+            <textarea class="form-control" rows="3" id="inputAssessment" placeholder="1. smoker
+2. asthmatic
+3. pericoronitis"></textarea>
+          </div>
+        </div>
+        <div class="form-group has-feedback">
+          <label class="control-label col-sm-2" for="inputPlan">Plan</label>
+          <div class="col-sm-10">
+            <textarea class="form-control" rows="3" id="inputPlan" placeholder="Pericoronitis
+1. extraction
+2. antibiotics
+3. analgesics
+4. followup"></textarea>
+          </div>
+        </div>
+        
+        
+        <p class="pull-right">
+          <button type="button" class="btn btn-default" onclick="window.location.href='clinical_record_summary.html'">Cancel</button>
+          &nbsp;
+          <button type="button" class="btn btn-success" onclick="window.location.href='clinical_record_summary.html'">Save</button>
+        </p>
+      </form>
+      
     </div>
 
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
