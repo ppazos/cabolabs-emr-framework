@@ -52,15 +52,22 @@
         letter-spacing: .15em;
       }
       
-      /* PATIENT LIST STYLE */
-      tbody > tr {
-        cursor: pointer;
+      /* HISTORICAL FIRST VISIT */
+      .container {
+        margin-bottom: 1em;
+        padding-bottom: 1em;
+        border-bottom: 1px solid #ddd;
+      }
+      input[type=number] {
+        display: inline-block;
+        width: 30%;
+        margin: 0 5px;
       }
     </style>
   </head>
   <body>
     <div class="container">
-      <h1>SOAP Note</h1>
+      <h1>Historical First Visit</h1>
     </div>
     
     <div class="container">
@@ -89,40 +96,60 @@
       </div>
     </div>
     
+    <!-- Document header -->
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6">
+          Author:
+          <img src="https://wallpaperscraft.com/image/house_md_actor_dr_gregory_house_face_hugh_laurie_2019_400x480.jpg" class="img-circle" style="width: 32px; height: 32px;">
+          Dr. Gregory House
+        </div>
+        <div class="col-md-6">Created: 2016-04-05 13>59</div>
+      </div>
+      <div class="row">
+        <div class="col-md-6">At: Global Health Hospital</div>
+        <div class="col-md-6">London, UK</div>
+      </div>
+    </div>
+    
     
     <div class="container">
-
       <form class="form-horizontal">
-      
-        <div class="form-group has-feedback">
-          <label class="control-label col-sm-2" for="inputSubjective">Subjective</label>
+        <div class="form-group">
+          <label class="control-label col-sm-2" for="inputReason">Reason for encounter</label>
           <div class="col-sm-10">
-            <textarea class="form-control" rows="3" id="inputSubjective" placeholder="lower left back jaw has been sore for the past few days"></textarea>
+            <input type="text" class="form-control" id="inputReason" placeholder="neck pain">
           </div>
         </div>
-        <div class="form-group has-feedback">
-          <label class="control-label col-sm-2" for="inputObjective">Objective</label>
+        <div class="form-group">
+          <label class="control-label col-sm-2" for="inputObjective">Clinical examination and findings</label>
           <div class="col-sm-10">
-            <textarea class="form-control" rows="3" id="inputObjective" placeholder="1. intraoral swelling, hemorrhage, pain
-2. radiology Pano CT: partial bony, vertically impacted molar, no IAN involved"></textarea>
+            <textarea class="form-control" rows="3" id="inputObjective" placeholder=""></textarea>
           </div>
         </div>
-        <div class="form-group has-feedback">
-          <label class="control-label col-sm-2" for="inputAssessment">Assessment</label>
+        <div class="form-group">
+          <label class="control-label col-sm-2" for="inputAssessment">Vitals</label>
           <div class="col-sm-10">
-            <textarea class="form-control" rows="3" id="inputAssessment" placeholder="1. smoker
-2. asthmatic
-3. pericoronitis"></textarea>
+            <div class="row">
+              <div class="col-md-3">
+                Systolic BP <input type="number" class="form-control" id="inputSBP" /> mmHg
+              </div>
+              <div class="col-md-3">
+                Diastolic BP <input type="number" class="form-control" id="inputDBP" /> mmHg
+              </div>
+              <div class="col-md-3">
+                Weight <input type="number" class="form-control" id="inputWeight" /> Kg
+              </div>
+              <div class="col-md-3">
+                Temperature <input type="number" class="form-control" id="inputTemperature" /> Cº
+              </div>
+            </div>
           </div>
         </div>
-        <div class="form-group has-feedback">
+        <div class="form-group">
           <label class="control-label col-sm-2" for="inputPlan">Plan</label>
           <div class="col-sm-10">
-            <textarea class="form-control" rows="3" id="inputPlan" placeholder="Pericoronitis
-1. extraction
-2. antibiotics
-3. analgesics
-4. followup"></textarea>
+            <textarea class="form-control" rows="3" id="inputPlan" placeholder=""></textarea>
           </div>
         </div>
         

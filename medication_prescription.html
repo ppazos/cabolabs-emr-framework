@@ -64,6 +64,32 @@
     </div>
     
     <div class="container">
+      <h2>Patient</h2>
+      <p><a href="#" data-toggle="modal" data-target=".bs-example-modal-lg">Carlos Lopez</a> (33) M</p>
+    </div>
+
+    <div class="modal fade bs-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel">
+      <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+            <h4 class="modal-title" id="gridSystemModalLabel">Patient details</h4>
+          </div>
+          <div class="modal-body">
+            <div class="row">
+              <div class="col-md-6">Carlos Lopez</div>
+              <div class="col-md-6">1982-06-03</div>
+            </div>
+            <div class="row">
+               <div class="col-md-6">Male</div>
+               <div class="col-md-6">555-564-6564</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <div class="container">
 
       <form class="form-horizontal">
       
@@ -86,7 +112,7 @@
           <div class="col-sm-5">
             <div class="form-group row">
               <div class="col-sm-6">
-                  <input type="number" class="form-control" id="inputDose" placeholder="1">
+                <input type="number" class="form-control" id="inputDose" placeholder="1">
               </div>
               <div class="col-sm-6">
                   <!-- TBD: put the dependance between route, dosage form and dosage unit in a JS structure.
