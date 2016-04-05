@@ -82,9 +82,92 @@
           </div>
         </div>
         <div class="form-group">
+          <label for="inputPresentation" class="col-sm-2 control-label">Take</label>
+          <div class="col-sm-5">
+            <div class="form-group row">
+              <div class="col-sm-6">
+                  <input type="number" class="form-control" id="inputDose" placeholder="1">
+              </div>
+              <div class="col-sm-6">
+                  <!-- TBD: put the dependance between route, dosage form and dosage unit in a JS structure.
+                  https://en.wikipedia.org/wiki/Dosage_form
+                  https://www.academia.edu/7849805/Pharmaceutical_Dosage_Forms
+                    form - form unit
+                    pill - pills
+                    tablet - tablets
+                    capsule - capsules
+                    drink or syrup - volume
+                    drops - drops
+                    inhaler - shots
+                    vaporizer - time
+                    solution - volume
+                    cream - times (of application)
+                    ...
+                  -->
+                  <select class="form-control" name="inputDoseForm">
+                    <option>pills</option>
+                    <option>tablets</option>
+                    <option>capsules</option>
+                    <option>volume (cc)</option>
+                    <option>volume (dL)</option>
+                    <option>drops</option>
+                    <option>shots</option>
+                  </select>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-5">
+            <div class="radio">
+             <label>
+               <input type="radio" name="takeFrequency" value="2h"> Every 2 hours
+             </label>
+            </div>
+            <div class="radio">
+             <label>
+               <input type="radio" name="takeFrequency" value="4h"> Every 4 hours
+             </label>
+            </div>
+            <div class="radio">
+             <label>
+               <input type="radio" name="takeFrequency" value="6h"> Every 6 hours
+             </label>
+            </div>
+            <div class="radio">
+             <label>
+               <input type="radio" name="takeFrequency" value="8h"> Every 8 hours
+             </label>
+            </div>
+            <div class="radio">
+             <label>
+               <input type="radio" name="takeFrequency" value="12h"> Every 12 hours
+             </label>
+            </div>
+            <div class="radio">
+             <label>
+               <input type="radio" name="takeFrequency" value="bkfst"> With breakfast
+             </label>
+            </div>
+            <div class="radio">
+             <label>
+               <input type="radio" name="takeFrequency" value="lnch"> With lunch
+             </label>
+            </div>
+            <div class="radio">
+             <label>
+               <input type="radio" name="takeFrequency" value="dnnr"> With dinner
+             </label>
+            </div>
+            <div class="radio">
+             <label>
+               <input type="radio" name="takeFrequency" value="bb"> Before goint to sleep
+             </label>
+            </div>
+          </div>
+        </div>
+        <div class="form-group">
           <label for="inputRoute" class="col-sm-2 control-label">Route</label>
           <div class="col-sm-10">
-            <select class="form-control" id="inputRoute" placeholder="Route">
+            <select class="form-control" id="inputRoute">
               <option>OTIC</option>
               <option>BUCCAL</option>
               <option>CONJUNC</option>
@@ -106,7 +189,7 @@
           </div>
         </div>
         <!-- http://www.fda.gov/Drugs/DevelopmentApprovalProcess/FormsSubmissionRequirements/ElectronicSubmissions/DataStandardsManualmonographs/ucm071667.htm -->
-  
+
         <div class="form-group">
           <label for="inputAdministration" class="col-sm-2 control-label">Administration directions</label>
           <div class="col-sm-10">
