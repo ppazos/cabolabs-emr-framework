@@ -52,22 +52,23 @@
         letter-spacing: .15em;
       }
       
-      /* HISTORICAL FIRST VISIT */
+      /* PATIENT LIST STYLE */
+      tbody > tr {
+        cursor: pointer;
+      }
       .container {
         margin-bottom: 1em;
         padding-bottom: 1em;
         border-bottom: 1px solid #ddd;
       }
-      input[type=number] {
-        display: inline-block;
-        width: 30%;
-        margin: 0 5px;
+      input[type=checkbox] {
+        width: auto;
       }
     </style>
   </head>
   <body>
     <div class="container">
-      <h1>Historical First Visit</h1>
+      <h1>Lab order</h1>
     </div>
     
     <div class="container">
@@ -96,66 +97,41 @@
       </div>
     </div>
     
-    <!-- Document header -->
     <div class="container">
-      <div class="row">
-        <div class="col-md-6">
-          Author:
-          <img src="https://wallpaperscraft.com/image/house_md_actor_dr_gregory_house_face_hugh_laurie_2019_400x480.jpg" class="img-circle" style="width: 32px; height: 32px;">
-          Dr. Gregory House
-        </div>
-        <div class="col-md-6">Created: 2016-03-28 13:59</div>
-      </div>
-      <div class="row">
-        <div class="col-md-6">At: Global Health Hospital</div>
-        <div class="col-md-6">London, UK</div>
-      </div>
-    </div>
-    
-    
-    <div class="container">
+
       <form class="form-horizontal">
-        <div class="form-group">
-          <label class="control-label col-sm-2" for="inputReason">Reason for encounter</label>
+      
+        <div class="form-group has-feedback">
+          <label class="control-label col-sm-2" for="inputMedication">Request service</label>
           <div class="col-sm-10">
-            <p>Neck pain, dizziness</p>
+            <select class="form-control" name="inputDoseForm">
+              <option>cell count</option>
+              <option>lipid panel</option>
+              <option>urianalysis</option>
+              <option>glucose</option>
+              <option>blood culture</option>
+            </select>
           </div>
         </div>
         <div class="form-group">
-          <label class="control-label col-sm-2" for="inputObjective">Clinical examination and findings</label>
+          <label for="inputUrgent" class="col-sm-2 control-label">Is urgent?</label>
           <div class="col-sm-10">
-            <p>Neck contracture</p>
+            <input type="checkbox" class="form-control" id="inputUrgent" />
           </div>
         </div>
         <div class="form-group">
-          <label class="control-label col-sm-2" for="inputAssessment">Vitals</label>
+          <label for="inputDetails" class="col-sm-2 control-label">Details / observations</label>
           <div class="col-sm-10">
-            <div class="row">
-              <div class="col-md-3">
-                Systolic BP 120 mmHg
-              </div>
-              <div class="col-md-3">
-                Diastolic BP 84 mmHg
-              </div>
-              <div class="col-md-3">
-                Weight 83.5 Kg
-              </div>
-              <div class="col-md-3">
-                Temperature 36 Cº
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="form-group">
-          <label class="control-label col-sm-2" for="inputPlan">Plan</label>
-          <div class="col-sm-10">
-            <p>Ketoprofen 500 mg, 1 tablet every 8 hours</p>
-            <p>Sleep with 2 soft pillows</p>
-            <p>Correct position on desktop</p>
-            <p>Check up in two weeks if pain continues</p>
+            <textarea class="form-control" rows="3" id="inputDetails" placeholder=""></textarea>
           </div>
         </div>
         
+        <div class="form-group">
+          <label for="inputAdministration" class="col-sm-2 control-label">Expected date</label>
+          <div class="col-sm-10">
+            TBD: datetimepicker
+          </div>
+        </div>
         
         <p class="pull-right">
           <button type="button" class="btn btn-default" onclick="window.location.href='clinical_record_summary.html'">Cancel</button>
