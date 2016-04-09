@@ -27,6 +27,9 @@
     <![endif]-->
     
     <style>
+      html,body {
+          height:100%;
+      }
       body {
         font-family: "Roboto", "Helvetica Neue", Helvetica, Arial, sans-serif;
         font-size: 14px;
@@ -62,7 +65,8 @@
         background-color: #ddd;
       }
       .patient_caret { /* Vertical center of patient caret */
-        margin: auto 0;
+        margin: auto 0; /* center vertical */
+        padding-left: 8px; /* center horizontal */
       }
       .patient_caret i {
         font-size: 18px;
@@ -70,31 +74,40 @@
       }
       
       .card {
+        padding: 1em;
+        margin-left: -15px;
         background: #fff;
         border-radius: 2px;
         height: 300px;
-        overflow-y: auto;
-        
-        /*display: block;
-        float: left;*/
-        /*height: 300px;*/
-        /* margin: 1rem;*/
-        /*position: relative;*/
-        /*width: 300px;*/
-
-        /*box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);*/
         -webkit-box-shadow: 0px 2px 4px 2px rgba(0,0,0,0.16);
--moz-box-shadow: 0px 2px 4px 2px rgba(0,0,0,0.16);
-box-shadow: 0px 2px 4px 2px rgba(0,0,0,0.16);
-         
-         /*margin: 0.5rem 1rem 0.5rem 0;*/
+         -moz-box-shadow: 0px 2px 4px 2px rgba(0,0,0,0.16);
+         box-shadow: 0px 2px 4px 2px rgba(0,0,0,0.16);
       }
-      
       .card h2, .card h3, .professionals h4 {
         margin-top: 0;
       }
       .left-col [class*="col-"] {
         text-align: center;
+      }
+      
+      .card-content { /* Scroll in section cards */
+        overflow-y: auto;
+        height: 82%;
+      }
+      
+      /* test */
+      .just-shadow {
+         -webkit-box-shadow: 0px 2px 4px 2px rgba(0,0,0,0.16);
+         -moz-box-shadow: 0px 2px 4px 2px rgba(0,0,0,0.16);
+         box-shadow: 0px 2px 4px 2px rgba(0,0,0,0.16);
+      }
+      
+      /* test */
+      .panel {
+        margin-left: -15px;
+      }
+      .panel-heading {
+        background-color: #fff;
       }
     </style>
   </head>
@@ -173,137 +186,263 @@ box-shadow: 0px 2px 4px 2px rgba(0,0,0,0.16);
            </div>
          </div>
          <div class="col-sm-10">
-           <div class="row">
-             <h1>Sectors</h1>
+           <div class="container-fluid">
+             <div class="row">
+               <h1>Sectors</h1>
+             </div>
            </div>
            
-           <div class="container">
+           <div class="container-fluid">
            
-           <div class="row"><!-- row-eq-height -->
-             <div class="col-md-4 col-sm-6 col-xs-12">
-               <div class="card">
-                 <h2>Triage</h2>
-                 <div class="row-eq-height patient">
-                    <div class="col-md-11">
-                      <h3>Charles Atlas (56) M</h3>
-                      <span class="label label-info" title="new orders">O</span>
-                      <span class="label label-danger" title="new results">R</span>
-                      <span class="label label-warning" title="new treatments">T</span>
+              <div class="row"><!-- row-eq-height -->
+                <div class="col-md-4 col-sm-6 col-xs-12">
+                  <div class="card">
+                    <h2>Triage</h2>
+                    <div class="card-content">
+                       <div class="row-eq-height patient">
+                         <div class="col-md-1 patient_caret">
+                           <i class="fa fa-bars"></i>
+                         </div>
+                         <div class="col-md-10">
+                           <h3>Charles Atlas (56) M</h3>
+                           <span class="label label-info" title="new orders">O</span>
+                           <span class="label label-danger" title="new results">R</span>
+                           <span class="label label-warning" title="new treatments">T</span>
+                         </div>
+                         <div class="col-md-1 patient_caret">
+                           <i class="fa fa-chevron-right"></i>
+                         </div>
+                       </div>
+                       <div class="row-eq-height patient">
+                         <div class="col-md-1 patient_caret">
+                           <i class="fa fa-bars"></i>
+                         </div>
+                         <div class="col-md-10">
+                           <h3>Joan Moore (42) F</h3>
+                           <span class="label label-info" title="new orders">O</span>
+                           <span class="label label-danger" title="new results">R</span>
+                         </div>
+                         <div class="col-md-1 patient_caret">
+                           <i class="fa fa-chevron-right"></i>
+                         </div>
+                       </div>
                     </div>
-                    <div class="col-md-1 patient_caret">
-                      <i class="fa fa-chevron-right"></i>
+                  </div><!-- card -->
+                </div>
+
+                <div class="col-md-4 col-sm-6 col-xs-12">
+                  <div class="card">
+                    <h2>Observation</h2>
+                    <div class="card-content">
+                        <div class="row-eq-height patient">
+                          <div class="col-md-1 patient_caret">
+                            <i class="fa fa-bars"></i>
+                          </div>
+                          <div class="col-md-10">
+                            <h3>Miles Davis (36) M</h3>
+                            <span class="label label-danger" title="new results">R</span>
+                          </div>
+                          <div class="col-md-1 patient_caret">
+                            <i class="fa fa-chevron-right"></i>
+                          </div>
+                        </div>
                     </div>
+                  </div><!-- card -->
+                </div>
+
+                <div class="col-md-4 col-sm-6 col-xs-12">
+                  <div class="card">
+                    <h2>Boxes</h2>
+                    <div class="card-content">
+                      <div class="row-eq-height patient just-shadow">
+                          <div class="col-md-1 patient_caret">
+                            <i class="fa fa-bars"></i>
+                          </div>
+                          <div class="col-md-10">
+                            <h3>Mike Simpson (16) M</h3>
+                            <span class="label label-info" title="new orders">O</span>
+                            <span class="label label-default" title="new orders">Box 1</span>
+                          </div>
+                          <div class="col-md-1 patient_caret">
+                            <i class="fa fa-chevron-right"></i>
+                          </div>
+                      </div>
+                      <div class="row-eq-height patient">
+                          <div class="col-md-12">
+                            <h3>Box 2</h3>
+                            <span class="label label-default" title="new orders">free</span>
+                          </div>
+                      </div>
+                      <div class="row-eq-height patient">
+                          <div class="col-md-12">
+                            <h3>Box 3</h3>
+                            <span class="label label-default" title="new orders">free</span>
+                          </div>
+                      </div>
+                    </div>
+                  </div><!-- card -->
+                </div>
+
+              </div>
+           </div><!-- container -->
+           <div class="container-fluid">
+           
+              <div class="row">
+                <div class="col-md-4 col-sm-6 col-xs-12">
+                  <div class="card">
+                    <h2>Beds</h2>
+                    <div class="card-content">
+                        <div class="row-eq-height patient">
+                          <div class="col-md-12">
+                            <h3>Bed 1</h3>
+                            <span class="label label-default" title="new orders">free</span>
+                          </div>
+                        </div>
+                        <div class="row-eq-height patient">
+                          <div class="col-md-12">
+                            <h3>Bed 2</h3>
+                            <span class="label label-default" title="new orders">free</span>
+                          </div>
+                        </div>
+                        <div class="row-eq-height patient">
+                          <div class="col-md-12">
+                            <h3>Bed 3</h3>
+                            <span class="label label-default" title="new orders">free</span>
+                          </div>
+                        </div>
+                    </div>
+                  </div><!-- card -->
+                </div>
+
+                <div class="col-md-4 col-sm-6 col-xs-12">
+                  <div class="card">
+                     <h2>Sector A</h2>
+                     <div class="row-eq-height patient">
+                       <div class="col-md-12">
+                         ...
+                       </div>
+                     </div>
+                   </div><!-- card -->
+                </div>
+
+                <div class="col-md-4 col-sm-6 col-xs-12">
+                   <div class="card">
+                     <h2>Sector B</h2>
+                     <div class="row-eq-height patient">
+                       <div class="col-md-12">
+                         ...
+                       </div>
+                     </div>
+                   </div><!-- card -->
+                </div>
+                
+                <div class="col-md-4 col-sm-6 col-xs-12">
+                  <div class="card">
+                     <h2>Sector 9</h2>
+                     <div class="row-eq-height patient">
+                       <div class="col-md-12">
+                         ...
+                       </div>
+                     </div>
+                     <div class="row-eq-height patient">
+                       <div class="col-md-12">
+                         ...
+                       </div>
+                     </div>
+                     <div class="row-eq-height patient">
+                       <div class="col-md-12">
+                         ...
+                       </div>
+                     </div>
+                  </div><!-- card -->
+                </div>
+
+                <div class="col-md-4 col-sm-6 col-xs-12">
+                  <div class="card">
+                     <h2>Sector 10</h2>
+                     <div class="row-eq-height patient">
+                       <div class="col-md-12">
+                         ...
+                       </div>
+                     </div>
+                     <div class="row-eq-height patient">
+                       <div class="col-md-12">
+                         ...
+                       </div>
+                     </div>
+                   </div><!-- card -->
+                </div>
+
+                <div class="col-md-4 col-sm-6 col-xs-12">
+                   <div class="card">
+                     <h2>Sector 11</h2>
+                     <div class="row-eq-height patient">
+                       <div class="col-md-12">
+                         ...
+                       </div>
+                     </div>
+                   </div><!-- card -->
+                </div>
+                
+              </div>
+           
+           </div><!-- container -->
+           
+           <!-- test with panesls -->
+           <div class="container-fluid">
+             <div class="row">
+               <div class="col-md-4 col-sm-6 col-xs-12">
+                 <div class="panel panel-default just-shadow">
+                   <div class="panel-heading">
+                     <h3 class="panel-title">Sector X</h3>
+                   </div>
+                   <div class="panel-body">
+                     Panel content
+                   </div>
                  </div>
-                 <div class="row-eq-height patient">
-                    <div class="col-md-11">
-                      <h3>Joan Moore (42) F</h3>
-                      <span class="label label-info" title="new orders">O</span>
-                      <span class="label label-danger" title="new results">R</span>
-                    </div>
-                    <div class="col-md-1 patient_caret">
-                      <i class="fa fa-chevron-right"></i>
-                    </div>
-                  </div>
-               </div><!-- card -->
+               </div>
+               <div class="col-md-4 col-sm-6 col-xs-12">
+                 <div class="panel panel-default">
+                   <div class="panel-heading">
+                     <h3 class="panel-title">Sector X</h3>
+                   </div>
+                   <div class="panel-body">
+                     Panel content
+                   </div>
+                 </div>
+               </div>
+               <div class="col-md-4 col-sm-6 col-xs-12">
+                 <div class="panel panel-default">
+                   <div class="panel-heading">
+                     <h3 class="panel-title">Sector X</h3>
+                   </div>
+                   <div class="panel-body">
+                     Panel content
+                   </div>
+                 </div>
+               </div>
+               <div class="col-md-4 col-sm-6 col-xs-12">
+                 <div class="panel panel-default">
+                   <div class="panel-heading">
+                     <h3 class="panel-title">Sector X</h3>
+                   </div>
+                   <div class="panel-body">
+                     Panel content
+                   </div>
+                 </div>
+               </div>
+               <div class="col-md-4 col-sm-6 col-xs-12">
+                 <div class="panel panel-default">
+                   <div class="panel-heading">
+                     <h3 class="panel-title">Sector X</h3>
+                   </div>
+                   <div class="panel-body">
+                     Panel content
+                   </div>
+                 </div>
+               </div>
              </div>
-
-             <div class="col-md-4 col-sm-6 col-xs-12">
-               <div class="card">
-                  <h2>Observation</h2>
-                  <div class="row-eq-height patient">
-                    <div class="col-md-11">
-                      <h3>Miles Davis (36) M</h3>
-                      <span class="label label-danger" title="new results">R</span>
-                    </div>
-                    <div class="col-md-1 patient_caret">
-                      <i class="fa fa-chevron-right"></i>
-                    </div>
-                  </div>
-               </div><!-- card -->
-             </div>
-
-             <div class="col-md-4 col-sm-6 col-xs-12">
-               <div class="card">
-                  <h2>Boxes</h2>
-                  <div class="row-eq-height patient">
-                    <div class="col-md-11">
-                      <h3>Mike SImpson (16) M</h3>
-                      <span class="label label-info" title="new orders">O</span>
-                      <span class="label label-default" title="new orders">Box 1</span>
-                    </div>
-                    <div class="col-md-1 patient_caret">
-                      <i class="fa fa-chevron-right"></i>
-                    </div>
-                  </div>
-                  <div class="row-eq-height patient">
-                    <div class="col-md-12">
-                      <h3>Box 2</h3>
-                      <span class="label label-default" title="new orders">free</span>
-                    </div>
-                  </div>
-                  <div class="row-eq-height patient">
-                    <div class="col-md-12">
-                      <h3>Box 3</h3>
-                      <span class="label label-default" title="new orders">free</span>
-                    </div>
-                  </div>
-               </div><!-- card -->
-             </div>
-
            </div>
-           
-           </div><!-- container -->
-           <div class="container">
-           
-           <div class="row">
-             <div class="col-md-4 col-sm-6 col-xs-12">
-               <div class="card">
-                  <h2>Beds</h2>
-                  <div class="row-eq-height patient">
-                    <div class="col-md-12">
-                      <h3>Bed 1</h3>
-                      <span class="label label-default" title="new orders">free</span>
-                    </div>
-                  </div>
-                  <div class="row-eq-height patient">
-                    <div class="col-md-12">
-                      <h3>Bed 2</h3>
-                      <span class="label label-default" title="new orders">free</span>
-                    </div>
-                  </div>
-                  <div class="row-eq-height patient">
-                    <div class="col-md-12">
-                      <h3>Bed 3</h3>
-                      <span class="label label-default" title="new orders">free</span>
-                    </div>
-                  </div>
-               </div><!-- card -->
-             </div>
-
-             <div class="col-md-4 col-sm-6 col-xs-12">
-               <div class="card">
-                  <h2>Sector A</h2>
-                  <div class="row-eq-height patient">
-                    <div class="col-md-12">
-                      ...
-                    </div>
-                  </div>
-                </div><!-- card -->
-              </div>
-
-              <div class="col-md-4 col-sm-6 col-xs-12">
-                <div class="card">
-                  <h2>Sector B</h2>
-                  <div class="row-eq-height patient">
-                    <div class="col-md-12">
-                      ...
-                    </div>
-                  </div>
-                </div><!-- card -->
-              </div>
-           </div>
-           
-           </div><!-- container -->
            
          </div>
       </div>
