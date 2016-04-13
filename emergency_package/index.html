@@ -103,6 +103,7 @@
       .card-content { /* Scroll in section cards */
         overflow-y: auto;
         height: 82%;
+        position: relative;
       }
       
       /* test */
@@ -486,13 +487,56 @@
     <script src="jquery-sortable-min.js"></script>
     <script>
       
-      // doesnt work https://johnny.github.io/jquery-sortable/
-      $('.card-content').sortable({
-        group: 'card-content',
-        containerSelector: 'div.card-content',
-  itemPath: '> div',
-  itemSelector: '.patient',
-  placeholder: '<div style="height: 1em; background-color: #f00;"/>'
+      $(function() { // ready
+         
+         // https://johnny.github.io/jquery-sortable/
+         
+         var adjustment;
+         
+         $('.card-content').sortable({
+           group: 'card-content',
+           handle: '.patient_caret > i.fa-bars',
+           pullPlaceholder: false,
+           containerSelector: '.card-content',
+           itemSelector: '.patient',
+           placeholder: '<div style="height: 1em; border: 1px dashed #5bc0de;" class="placeholder"/>',
+
+           // set $item relative to cursor position
+           onDragStart: function ($item, container, _super) {
+             console.log('drag start', $item);
+           
+             var offset = $item.offset();
+             var pointer = container.rootGroup.pointer;
+             
+             console.log(container)
+
+             adjustment = {
+               left: pointer.left - offset.left,
+               top: pointer.top - offset.top
+             };
+             
+             console.log(adjustment);
+
+             _super($item, container);
+             
+             // shows the item on the mouse position but the drop gets broken...
+             //$item.css('position','relative');
+           },
+           onDrag: function ($item, position) {
+           
+             $item.css({
+               left: position.left - adjustment.left,
+               top: position.top - adjustment.top
+             });
+             
+             console.log('drag', $item, position);
+           },
+           onDrop: function ($item, container, _super, event) {
+              //$item.removeClass(container.group.options.draggedClass).removeAttr("style")
+              //$("body").removeClass(container.group.options.bodyClass)
+              //$item.css('position','relative');
+           }
+         });
       });
       
       var checkin = function() {
