@@ -16,7 +16,7 @@
     <!-- Needed by bootstrap-notify -->
     <link href="http://cdnjs.cloudflare.com/ajax/libs/animate.css/3.2.0/animate.min.css" rel="stylesheet">
     
-    <!-- Fond Awesome -->
+    <!-- Font Awesome -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
 
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
@@ -103,7 +103,15 @@
       .card-content { /* Scroll in section cards */
         overflow-y: auto;
         height: 82%;
-        position: relative;
+      }
+      .ui-state-highlight {
+        height: 2.5em;
+        line-height: 1.4em;
+        border: 1px dashed #8EF3FF;
+	     background: #F4FFFF;
+      }
+      .ui-sortable-helper {
+        opacity: 0.6;
       }
       
       /* test */
@@ -298,13 +306,13 @@
                             <i class="fa fa-chevron-right"></i>
                           </div>
                       </div>
-                      <div class="row-eq-height patient">
+                      <div class="row-eq-height patient not-draggable">
                           <div class="col-md-12">
                             <h3>Box 2</h3>
                             <span class="label label-default" title="new orders">free</span>
                           </div>
                       </div>
-                      <div class="row-eq-height patient">
+                      <div class="row-eq-height patient not-draggable">
                           <div class="col-md-12">
                             <h3>Box 3</h3>
                             <span class="label label-default" title="new orders">free</span>
@@ -323,19 +331,19 @@
                   <div class="card">
                     <h2>Beds</h2>
                     <div class="card-content">
-                        <div class="row-eq-height patient">
+                        <div class="row-eq-height patient not-draggable">
                           <div class="col-md-12">
                             <h3>Bed 1</h3>
                             <span class="label label-default" title="new orders">free</span>
                           </div>
                         </div>
-                        <div class="row-eq-height patient">
+                        <div class="row-eq-height patient not-draggable">
                           <div class="col-md-12">
                             <h3>Bed 2</h3>
                             <span class="label label-default" title="new orders">free</span>
                           </div>
                         </div>
-                        <div class="row-eq-height patient">
+                        <div class="row-eq-height patient not-draggable">
                           <div class="col-md-12">
                             <h3>Bed 3</h3>
                             <span class="label label-default" title="new orders">free</span>
@@ -484,13 +492,22 @@
     <!-- Include all compiled plugins (below), or include individual files as needed -->
     <script src="../bootstrap-3.3.6-dist/js/bootstrap.min.js"></script>
     <script src="bootstrap-notify.min.js"></script>
-    <script src="jquery-sortable-min.js"></script>
+    <!--<script src="jquery-sortable-min.js"></script>-->
+    <script src="jquery-ui-1.11.4.sortable/jquery-ui.min.js"></script>
+    
     <script>
       
       $(function() { // ready
          
-         // https://johnny.github.io/jquery-sortable/
+         $(".card-content").sortable({
+            connectWith: ".card-content",
+            cancel: ".not-draggable", // Do not drag these items
+            placeholder: "ui-state-highlight"
+          });
+         $(".card-content").disableSelection();
          
+         // https://johnny.github.io/jquery-sortable/
+         /* doesnt support touch events
          var adjustment;
          
          $('.card-content').sortable({
@@ -537,7 +554,10 @@
               //$item.css('position','relative');
            }
          });
-      });
+         */
+         
+         
+      }); // ready
       
       var checkin = function() {
         // http://bootstrap-notify.remabledesigns.com/
