@@ -121,7 +121,8 @@
                   <div class="card">
                     <h2>Triage</h2>
                     <div class="card-content">
-                       <div class="row-eq-height patient" onclick="window.location.href='patient.html'" ontouchleave="window.location.href='patient.html'">
+                      <!-- onclick="window.location.href='patient.html'" ontouchleave="window.location.href='patient.html'" -->
+                       <div class="row-eq-height patient" data-patient-id="patient">
                          <div class="patient-handle">
                            <i class="fa fa-bars"></i>
                          </div>
@@ -387,7 +388,7 @@
     <!--<script src="jquery-sortable-min.js"></script>-->
     <script src="jquery-ui-1.11.4.sortable/jquery-ui.min.js"></script>
     <script src="jquery.ui.touch-punch.min.js"></script>
-    
+    <script src="jquery.mobile.custom.min.js"></script><!-- touch events to allow navigation (tap) -->
     <script>
       
       $(function() { // ready
@@ -398,6 +399,17 @@
             placeholder: "ui-state-highlight"
           });
          $(".card-content").disableSelection();
+         
+         // FIXME: it seems click also calls tap ...
+         // support click and tap
+         $('.patient').on('tap', function() { ///jquery mobile
+           console.log( $(this).data('patient-id') );
+           patient_link($(this).data('patient-id'));
+         });
+         $('.patient').on('click', function() {
+           console.log( $(this).data('patient-id') );
+           patient_link($(this).data('patient-id'));
+         });
          
          // https://johnny.github.io/jquery-sortable/
          /* doesnt support touch events
@@ -451,6 +463,12 @@
          
          
       }); // ready
+      
+      var patient_link = function (patient_id) {
+        if (patient_id != undefined)
+          window.location = patient_id + '.html';
+      };
+      
       
       var checkin = function() {
         // http://bootstrap-notify.remabledesigns.com/
