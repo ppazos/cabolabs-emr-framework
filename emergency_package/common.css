@@ -31,23 +31,34 @@
         line-height: 1.2;
         color: inherit;
         letter-spacing: .15em;
-        
         margin-top: 0;
       }
       
       .patient {
         cursor: pointer;
+        width: 100%;
+        display: table;
+        padding: 15px 0; /* Vertical space between patient cards */
       }
       .patient:hover {
         background-color: #ddd;
       }
-      .patient_caret { /* Vertical center of patient caret */
-        margin: auto 0; /* center vertical */
-        padding-left: 8px; /* center horizontal */
-      }
-      .patient_caret i {
+      .patient-caret i , .patient-handle i {
         font-size: 18px;
         font-weight: 100;
+      }
+      .patient-handle, .patient-data, .patient-caret {
+        display: table-cell;
+        padding: 0;
+      }
+      .patient-data {
+        width: 84%;
+        padding-left: 10px; /* add space between the handle and the patient data */
+      }
+      .patient-handle, .patient-caret {
+        width: 8%;
+        text-align: center;
+        vertical-align: middle;
       }
       
       .card {

@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
     <title>CaboLabs EMR Framework</title>
 
@@ -61,7 +61,7 @@
   
     <div class="container-fluid">
       <div class="row">
-         <div class="col-sm-2 left-col">
+         <div class="col-sm-4 col-md-3 col-lg-2 left-col">
            <div class="row">
              <div class="col-xs-6">
                <p>Check-in</p>
@@ -105,7 +105,7 @@
              </div>
            </div>
          </div>
-         <div class="col-sm-10">
+         <div class="col-sm-8 col-md-9 col-lg-10">
            <div class="container-fluid">
              <div class="row">
                <div class="col-md-12">
@@ -117,15 +117,15 @@
            <div class="container-fluid">
            
               <div class="row"><!-- row-eq-height -->
-                <div class="col-md-4 col-sm-6 col-xs-12 less-top">
+                <div class="col-lg-4 col-md-6 col-sm-12 less-top">
                   <div class="card">
                     <h2>Triage</h2>
                     <div class="card-content">
-                       <div class="row-eq-height patient" onclick="window.location.href='patient.html'">
-                         <div class="col-md-1 patient_caret">
+                       <div class="row-eq-height patient" onclick="window.location.href='patient.html'" ontouchleave="window.location.href='patient.html'">
+                         <div class="patient-handle">
                            <i class="fa fa-bars"></i>
                          </div>
-                         <div class="col-md-10">
+                         <div class="patient-data">
                            <h3>Charles Atlas (56) M</h3>
                            <span class="label label-info" title="new orders">O</span>
                            <span class="label label-danger" title="new results">R</span>
@@ -133,15 +133,15 @@
                            <img src="https://wallpaperscraft.com/image/house_md_actor_dr_gregory_house_face_hugh_laurie_2019_400x480.jpg" class="img-circle" style="width: 32px; height: 32px;">
                            <img src="http://www.simon-li.com/projects/mongkok-modx-new/assets/components/MongKok/images/gallery/large/random-user-12.jpg" class="img-circle" style="width: 32px; height: 32px;">
                          </div>
-                         <div class="col-md-1 patient_caret">
+                         <div class="patient-caret">
                            <i class="fa fa-chevron-right"></i>
                          </div>
                        </div>
                        <div class="row-eq-height patient">
-                         <div class="col-md-1 patient_caret">
+                         <div class="patient-handle">
                            <i class="fa fa-bars"></i>
                          </div>
-                         <div class="col-md-10">
+                         <div class="patient-data">
                            <h3>Joan Moore (42) F</h3>
                            <span class="label label-info" title="new orders">O</span>
                            <span class="label label-danger" title="new results">R</span>
@@ -151,7 +151,7 @@
                            </span>
                            <span><i class="fa fa-file-text-o fa-2"></i></span>
                          </div>
-                         <div class="col-md-1 patient_caret">
+                         <div class="patient-caret">
                            <i class="fa fa-chevron-right"></i>
                          </div>
                        </div>
@@ -159,21 +159,21 @@
                   </div><!-- card -->
                 </div>
 
-                <div class="col-md-4 col-sm-6 col-xs-12 less-top">
+                <div class="col-lg-4 col-md-6 col-sm-12 less-top">
                   <div class="card">
                     <h2>Observation</h2>
                     <div class="card-content">
                         <div class="row-eq-height patient">
-                          <div class="col-md-1 patient_caret">
+                          <div class="patient-handle">
                             <i class="fa fa-bars"></i>
                           </div>
-                          <div class="col-md-10">
+                          <div class="patient-data">
                             <h3>Miles Davis (36) M</h3>
                             <span class="label label-danger" title="new results">R</span>
                             <img src="http://www.simon-li.com/projects/mongkok/cs2/images/gallery/small/random-user-13.jpg" class="img-circle" style="width: 32px; height: 32px;">
                             <img src="http://www.guysandstthomas.nhs.uk/images/c/cancer/clinical-nurse-specialist/20150312-Joan-Travers.jpg" class="img-circle" style="width: 32px; height: 32px;">
                           </div>
-                          <div class="col-md-1 patient_caret">
+                          <div class="patient-caret">
                             <i class="fa fa-chevron-right"></i>
                           </div>
                         </div>
@@ -181,20 +181,20 @@
                   </div><!-- card -->
                 </div>
 
-                <div class="col-md-4 col-sm-6 col-xs-12 less-top">
+                <div class="col-lg-4 col-md-6 col-sm-12 less-top">
                   <div class="card">
                     <h2>Boxes</h2>
                     <div class="card-content">
-                      <div class="row-eq-height patient">
-                          <div class="col-md-1 patient_caret">
+                      <div class="patient">
+                          <div class="patient-handle">
                             <i class="fa fa-bars"></i>
                           </div>
-                          <div class="col-md-10">
+                          <div class="patient-data">
                             <h3>Mike Simpson (16) M</h3>
                             <span class="label label-info" title="new orders">O</span>
                             <span class="label label-default" title="new orders">Box 1</span>
                           </div>
-                          <div class="col-md-1 patient_caret">
+                          <div class="patient-caret">
                             <i class="fa fa-chevron-right"></i>
                           </div>
                       </div>
@@ -219,7 +219,7 @@
            <div class="container-fluid">
            
               <div class="row">
-                <div class="col-md-4 col-sm-6 col-xs-12">
+                <div class="col-lg-4 col-md-6 col-sm-12">
                   <div class="card">
                     <h2>Beds</h2>
                     <div class="card-content">
@@ -245,7 +245,7 @@
                   </div><!-- card -->
                 </div>
 
-                <div class="col-md-4 col-sm-6 col-xs-12">
+                <div class="col-lg-4 col-md-6 col-sm-12">
                   <div class="card">
                      <h2>Sector A</h2>
                      <div class="row-eq-height patient">
@@ -256,7 +256,7 @@
                    </div><!-- card -->
                 </div>
 
-                <div class="col-md-4 col-sm-6 col-xs-12">
+                <div class="col-lg-4 col-md-6 col-sm-12">
                    <div class="card">
                      <h2>Sector B</h2>
                      <div class="row-eq-height patient">
@@ -267,7 +267,7 @@
                    </div><!-- card -->
                 </div>
                 
-                <div class="col-md-4 col-sm-6 col-xs-12">
+                <div class="col-lg-4 col-md-6 col-sm-12">
                   <div class="card">
                      <h2>Sector 9</h2>
                      <div class="row-eq-height patient">
@@ -288,7 +288,7 @@
                   </div><!-- card -->
                 </div>
 
-                <div class="col-md-4 col-sm-6 col-xs-12">
+                <div class="col-lg-4 col-md-6 col-sm-12">
                   <div class="card">
                      <h2>Sector 10</h2>
                      <div class="row-eq-height patient">
@@ -304,7 +304,7 @@
                    </div><!-- card -->
                 </div>
 
-                <div class="col-md-4 col-sm-6 col-xs-12">
+                <div class="col-lg-4 col-md-6 col-sm-12">
                    <div class="card">
                      <h2>Sector 11</h2>
                      <div class="row-eq-height patient">
@@ -405,7 +405,7 @@
          
          $('.card-content').sortable({
            group: 'card-content',
-           handle: '.patient_caret > i.fa-bars',
+           handle: '.patient-caret > i.fa-bars',
            pullPlaceholder: false,
            containerSelector: '.card-content',
            itemSelector: '.patient',
