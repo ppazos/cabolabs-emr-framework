@@ -30,11 +30,11 @@
     </style>
   </head>
   <body>
-    <div class="container">
+    <div class="container-fluid">
       <h1>Clinical Summary</h1>
     </div>
     
-    <div class="container">
+    <div class="container-fluid">
       <h2>Patient</h2>
       <p><a href="#" data-toggle="modal" data-target=".bs-example-modal-lg">Carlos Lopez</a> (33) M</p>
     </div>
@@ -60,7 +60,7 @@
       </div>
     </div>
     
-    <div class="container">
+    <div class="container-fluid">
       <h2>Current visit</h2>
       <div class="list-group">
         <a href="first_visit.html" class="list-group-item">
@@ -83,7 +83,7 @@
           <h4 class="list-group-item-heading">Lab order</h4>
           <p class="list-group-item-text">Order one or more lab tests for this patient</p>
         </a>
-        <a href="#" class="list-group-item">
+        <a href="img_order.html" class="list-group-item">
           <h4 class="list-group-item-heading">Imaginology order</h4>
           <p class="list-group-item-text">Order one or more imaginology studies</p>
         </a>
@@ -91,11 +91,11 @@
       <button type="button" class="btn btn-success pull-right" onclick="window.location.href='sign.html';">Sign</button>
     </div>
     
-    <div class="container">
+    <div class="container-fluid">
       <h2>Health summary</h2>
       <div class="row">
         <div class="col-md-10">
-          <div id="container" style="min-width: 310px; height: 400px; margin: 0 auto"></div>
+          <div id="chart-container" style="min-width: 310px; height: 400px; margin: 0 auto"></div>
         </div>
         <div class="col-md-2">
           <h5>Alerts</h5>
@@ -115,7 +115,7 @@
     </div>
     
     
-    <div class="container">
+    <div class="container-fluid">
       <h2>Historical record</h2>
       <div class="table-responsive">
         <table class="table table-hover">
@@ -180,7 +180,7 @@
     
     <script type="text/javascript">
       $(function () {
-          $('#container').highcharts({
+          $('#chart-container').highcharts({
               chart: {
                   type: 'line'
               },
