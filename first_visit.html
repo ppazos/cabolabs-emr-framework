@@ -11,6 +11,8 @@
     
     <!-- Bootstrap -->
     <link href="bootstrap-3.3.6-dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <link href="common.css" rel="stylesheet">
 
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -19,55 +21,12 @@
       <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
     <style>
-      body {
-        font-family: "Roboto", "Helvetica Neue", Helvetica, Arial, sans-serif;
-        font-size: 14px;
-        line-height: 1.6;
-        color: #000000;
-        background-color: #ffffff;
-        font-weight: 300;
-        margin-bottom: 3em;
-      }
-      h1 {
-        font-size: 56px;
-        text-transform: uppercase;
-        text-align: center;
-      }
-      h1,
-      h2,
-      h3,
-      h4,
-      h5,
-      h6,
-      .eg,
-      .eh,
-      .ei,
-      .ej,
-      .ek,
-      .el {
-        font-family: "Roboto", "Helvetica Neue", Helvetica, Arial, sans-serif;
-        font-weight: 100;
-        line-height: 1.2;
-        color: inherit;
-        letter-spacing: .15em;
-      }
-      
-      /* HISTORICAL FIRST VISIT */
-      .container {
-        margin-bottom: 1em;
-        padding-bottom: 1em;
-        border-bottom: 1px solid #ddd;
-      }
-      input[type=number] {
-        display: inline-block;
-        width: 30%;
-        margin: 0 5px;
-      }
+
     </style>
   </head>
   <body>
     <div class="container">
-      <h1>Historical First Visit</h1>
+      <h1>First Visit</h1>
     </div>
     
     <div class="container">
@@ -114,18 +73,50 @@
         <div class="form-group">
           <label class="control-label col-sm-2" for="inputAssessment">Vitals</label>
           <div class="col-sm-10">
-            <div class="row">
-              <div class="col-md-3">
-                Systolic BP <input type="number" class="form-control" id="inputSBP" /> mmHg
+            <div class="form-group">
+              <div class="col-md-6">
+                <div class="form-group">
+                  <label class="col-sm-4 control-label">Systolic BP</label>
+                  <div class="col-sm-8">
+                    <div class="input-group">
+                      <input type="number" class="form-control" id="inputSBP" />
+                      <div class="input-group-addon">mmHg</div>
+                    </div>
+                  </div>
+                </div>
               </div>
-              <div class="col-md-3">
-                Diastolic BP <input type="number" class="form-control" id="inputDBP" /> mmHg
+              <div class="col-md-6">
+                <div class="form-group">
+                  <label class="col-sm-4 control-label">Diastolic BP</label>
+                  <div class="col-sm-8">
+                    <div class="input-group">
+                      <input type="number" class="form-control" id="inputDBP" />
+                      <div class="input-group-addon">mmHg</div>
+                    </div>
+                  </div>
+                </div>
               </div>
-              <div class="col-md-3">
-                Weight <input type="number" class="form-control" id="inputWeight" /> Kg
+              <div class="col-md-6">
+                <div class="form-group">
+                  <label class="col-sm-4 control-label">Weight</label>
+                  <div class="col-sm-8">
+                    <div class="input-group">
+                      <input type="number" class="form-control" id="inputWeight" />
+                      <div class="input-group-addon">Kg</div>
+                    </div>
+                  </div>
+                </div>
               </div>
-              <div class="col-md-3">
-                Temperature <input type="number" class="form-control" id="inputTemperature" /> Cº
+              <div class="col-md-6">
+                <div class="form-group">
+                  <label class="col-sm-4 control-label">Temperature</label>
+                  <div class="col-sm-8">
+                    <div class="input-group">
+                      <input type="number" class="form-control" id="inputTemperature" />
+                      <div class="input-group-addon">C&#176;</div>
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
           </div>

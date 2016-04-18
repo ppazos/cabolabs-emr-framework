@@ -394,7 +394,8 @@
       $(function() { // ready
          
          $(".card-content").sortable({
-            connectWith: ".card-content",
+            connectWith: ".card-content", // drag between zones
+            handle: '.patient-handle', // only drag from handle
             cancel: ".not-draggable", // Do not drag these items
             placeholder: "ui-state-highlight"
           });
