@@ -61,50 +61,7 @@
   
     <div class="container-fluid">
       <div class="row">
-         <div class="col-sm-4 col-md-3 col-lg-2 left-col">
-           <div class="row">
-             <div class="col-xs-6">
-               <p>Check-in</p>
-               <button type="button" class="btn btn-success btn-lg" data-toggle="modal" data-target=".checkin"><i class="fa fa-chevron-down"></i></button>
-             </div>
-             <div class="col-xs-6">
-               <p>Check-out</p>
-               <button type="button" class="btn btn-danger btn-lg"><i class="fa fa-chevron-up"></i></button>
-             </div>
-           </div>
-           <div class="row professionals">
-             <div class="col-md-12">
-               <img src="https://wallpaperscraft.com/image/house_md_actor_dr_gregory_house_face_hugh_laurie_2019_400x480.jpg" class="img-circle" style="width: 32px; height: 32px;">
-               <h4>Dr. Gregory House</h4>
-               inmunology
-             </div>
-             <div class="col-md-12">
-               <img src="https://blog-blogmediainc.netdna-ssl.com/upload/SportsBlogcom/2050367/0544679001427640602_profilePic.png" class="img-circle" style="width: 32px; height: 32px;">
-               <h4>Dr. Charles Beard</h4>
-               radiology
-             </div>
-             <div class="col-md-12">
-               <img src="http://www.simon-li.com/projects/mongkok/cs2/images/gallery/small/random-user-13.jpg" class="img-circle" style="width: 32px; height: 32px;">
-               <h4>Dr. James Cameron</h4>
-               chemistry
-             </div>
-             <div class="col-md-12">
-               <img src="http://www.mercabuzz.com/assets/Uploads/random-user-31.jpg" class="img-circle" style="width: 32px; height: 32px;">
-               <h4>Dr. Maria Rodriguez</h4>
-               cardiology
-             </div>
-             <div class="col-md-12">
-               <img src="http://www.simon-li.com/projects/mongkok-modx-new/assets/components/MongKok/images/gallery/large/random-user-12.jpg" class="img-circle" style="width: 32px; height: 32px;">
-               <h4>NP Nancy Mollock</h4>
-               nurse
-             </div>
-             <div class="col-md-12">
-               <img src="http://www.guysandstthomas.nhs.uk/images/c/cancer/clinical-nurse-specialist/20150312-Joan-Travers.jpg" class="img-circle" style="width: 32px; height: 32px;">
-               <h4>NP Barbara Steward</h4>
-               nurse
-             </div>
-           </div>
-         </div>
+         
          <div class="col-sm-8 col-md-9 col-lg-10">
            <div class="container-fluid">
              <div class="row">
@@ -122,7 +79,7 @@
                     <h2>Triage</h2>
                     <div class="card-content">
                       <!-- onclick="window.location.href='patient.html'" ontouchleave="window.location.href='patient.html'" -->
-                       <div class="row-eq-height patient" data-patient-id="patient">
+                       <div class="patient">
                          <div class="patient-handle">
                            <i class="fa fa-bars"></i>
                          </div>
@@ -134,11 +91,11 @@
                            <img src="https://wallpaperscraft.com/image/house_md_actor_dr_gregory_house_face_hugh_laurie_2019_400x480.jpg" class="img-circle" style="width: 32px; height: 32px;">
                            <img src="http://www.simon-li.com/projects/mongkok-modx-new/assets/components/MongKok/images/gallery/large/random-user-12.jpg" class="img-circle" style="width: 32px; height: 32px;">
                          </div>
-                         <div class="patient-caret">
+                         <div class="patient-caret" data-patient-id="patient">
                            <i class="fa fa-chevron-right"></i>
                          </div>
                        </div>
-                       <div class="row-eq-height patient">
+                       <div class="patient">
                          <div class="patient-handle">
                            <i class="fa fa-bars"></i>
                          </div>
@@ -152,7 +109,7 @@
                            </span>
                            <span><i class="fa fa-file-text-o fa-2"></i></span>
                          </div>
-                         <div class="patient-caret">
+                         <div class="patient-caret" data-patient-id="patient">
                            <i class="fa fa-chevron-right"></i>
                          </div>
                        </div>
@@ -164,7 +121,7 @@
                   <div class="card">
                     <h2>Observation</h2>
                     <div class="card-content">
-                        <div class="row-eq-height patient">
+                        <div class="patient">
                           <div class="patient-handle">
                             <i class="fa fa-bars"></i>
                           </div>
@@ -174,7 +131,7 @@
                             <img src="http://www.simon-li.com/projects/mongkok/cs2/images/gallery/small/random-user-13.jpg" class="img-circle" style="width: 32px; height: 32px;">
                             <img src="http://www.guysandstthomas.nhs.uk/images/c/cancer/clinical-nurse-specialist/20150312-Joan-Travers.jpg" class="img-circle" style="width: 32px; height: 32px;">
                           </div>
-                          <div class="patient-caret">
+                          <div class="patient-caret" data-patient-id="patient">
                             <i class="fa fa-chevron-right"></i>
                           </div>
                         </div>
@@ -199,13 +156,13 @@
                             <i class="fa fa-chevron-right"></i>
                           </div>
                       </div>
-                      <div class="row-eq-height patient not-draggable">
+                      <div class="patient not-draggable">
                           <div class="col-md-12">
                             <h3>Box 2</h3>
                             <span class="label label-default" title="new orders">free</span>
                           </div>
                       </div>
-                      <div class="row-eq-height patient not-draggable">
+                      <div class="patient not-draggable">
                           <div class="col-md-12">
                             <h3>Box 3</h3>
                             <span class="label label-default" title="new orders">free</span>
@@ -249,10 +206,7 @@
                 <div class="col-lg-4 col-md-6 col-sm-12">
                   <div class="card">
                      <h2>Sector A</h2>
-                     <div class="row-eq-height patient">
-                       <div class="col-md-12">
-                         ...
-                       </div>
+                     <div class="card-content">
                      </div>
                    </div><!-- card -->
                 </div>
@@ -260,10 +214,7 @@
                 <div class="col-lg-4 col-md-6 col-sm-12">
                    <div class="card">
                      <h2>Sector B</h2>
-                     <div class="row-eq-height patient">
-                       <div class="col-md-12">
-                         ...
-                       </div>
+                     <div class="card-content">
                      </div>
                    </div><!-- card -->
                 </div>
@@ -271,20 +222,7 @@
                 <div class="col-lg-4 col-md-6 col-sm-12">
                   <div class="card">
                      <h2>Sector 9</h2>
-                     <div class="row-eq-height patient">
-                       <div class="col-md-12">
-                         ...
-                       </div>
-                     </div>
-                     <div class="row-eq-height patient">
-                       <div class="col-md-12">
-                         ...
-                       </div>
-                     </div>
-                     <div class="row-eq-height patient">
-                       <div class="col-md-12">
-                         ...
-                       </div>
+                     <div class="card-content">
                      </div>
                   </div><!-- card -->
                 </div>
@@ -292,15 +230,7 @@
                 <div class="col-lg-4 col-md-6 col-sm-12">
                   <div class="card">
                      <h2>Sector 10</h2>
-                     <div class="row-eq-height patient">
-                       <div class="col-md-12">
-                         ...
-                       </div>
-                     </div>
-                     <div class="row-eq-height patient">
-                       <div class="col-md-12">
-                         ...
-                       </div>
+                     <div class="card-content">
                      </div>
                    </div><!-- card -->
                 </div>
@@ -308,10 +238,7 @@
                 <div class="col-lg-4 col-md-6 col-sm-12">
                    <div class="card">
                      <h2>Sector 11</h2>
-                     <div class="row-eq-height patient">
-                       <div class="col-md-12">
-                         ...
-                       </div>
+                     <div class="card-content">
                      </div>
                    </div><!-- card -->
                 </div>
@@ -377,6 +304,52 @@
            </div>
            
          </div>
+         
+         <!-- HR colum -->
+         <div class="col-sm-4 col-md-3 col-lg-2 left-col">
+           <div class="row">
+             <div class="col-xs-6">
+               <p>Check-in</p>
+               <button type="button" class="btn btn-success btn-lg" data-toggle="modal" data-target=".checkin"><i class="fa fa-chevron-down"></i></button>
+             </div>
+             <div class="col-xs-6">
+               <p>Check-out</p>
+               <button type="button" class="btn btn-danger btn-lg"><i class="fa fa-chevron-up"></i></button>
+             </div>
+           </div>
+           <div class="row professionals">
+             <div class="col-md-12">
+               <img src="https://wallpaperscraft.com/image/house_md_actor_dr_gregory_house_face_hugh_laurie_2019_400x480.jpg" class="img-circle" style="width: 32px; height: 32px;">
+               <h4>Dr. Gregory House</h4>
+               inmunology
+             </div>
+             <div class="col-md-12">
+               <img src="https://blog-blogmediainc.netdna-ssl.com/upload/SportsBlogcom/2050367/0544679001427640602_profilePic.png" class="img-circle" style="width: 32px; height: 32px;">
+               <h4>Dr. Charles Beard</h4>
+               radiology
+             </div>
+             <div class="col-md-12">
+               <img src="http://www.simon-li.com/projects/mongkok/cs2/images/gallery/small/random-user-13.jpg" class="img-circle" style="width: 32px; height: 32px;">
+               <h4>Dr. James Cameron</h4>
+               chemistry
+             </div>
+             <div class="col-md-12">
+               <img src="http://www.mercabuzz.com/assets/Uploads/random-user-31.jpg" class="img-circle" style="width: 32px; height: 32px;">
+               <h4>Dr. Maria Rodriguez</h4>
+               cardiology
+             </div>
+             <div class="col-md-12">
+               <img src="http://www.simon-li.com/projects/mongkok-modx-new/assets/components/MongKok/images/gallery/large/random-user-12.jpg" class="img-circle" style="width: 32px; height: 32px;">
+               <h4>NP Nancy Mollock</h4>
+               nurse
+             </div>
+             <div class="col-md-12">
+               <img src="http://www.guysandstthomas.nhs.uk/images/c/cancer/clinical-nurse-specialist/20150312-Joan-Travers.jpg" class="img-circle" style="width: 32px; height: 32px;">
+               <h4>NP Barbara Steward</h4>
+               nurse
+             </div>
+           </div>
+         </div>
       </div>
     </div>
 
@@ -395,22 +368,23 @@
          
          $(".card-content").sortable({
             connectWith: ".card-content", // drag between zones
-            handle: '.patient-handle', // only drag from handle
+            handle: '.patient-handle', // only drag from handle: https://jqueryui.com/resources/demos/draggable/handle.html
             cancel: ".not-draggable", // Do not drag these items
             placeholder: "ui-state-highlight"
           });
          $(".card-content").disableSelection();
          
-         // FIXME: it seems click also calls tap ...
-         // support click and tap
-         $('.patient').on('tap', function() { ///jquery mobile
+         // supports click and tap
+         $('.patient-caret').on('tap', function() { ///jquery mobile
            console.log( $(this).data('patient-id') );
            patient_link($(this).data('patient-id'));
          });
-         $('.patient').on('click', function() {
+         /*
+         $('.patient-caret').on('click', function() {
            console.log( $(this).data('patient-id') );
            patient_link($(this).data('patient-id'));
          });
+         */
          
          // https://johnny.github.io/jquery-sortable/
          /* doesnt support touch events
